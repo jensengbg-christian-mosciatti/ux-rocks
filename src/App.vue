@@ -7,6 +7,7 @@
 </template>
 
 <style lang="scss">
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,6 +26,18 @@
     &.router-link-exact-active {
       color: #42b983;
     }
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    box-shadow: none;
   }
 }
 </style>
