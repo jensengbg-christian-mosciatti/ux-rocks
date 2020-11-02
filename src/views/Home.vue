@@ -1,18 +1,24 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <PrimaryBtn title="PRIMARY" />
+    <GhostBtn title="GHOST" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import PrimaryBtn from "@/components/PrimaryBtn";
+import GhostBtn from "@/components/GhostBtn";
 
 export default {
+  
   name: "Home",
   components: {
-    HelloWorld
+    PrimaryBtn, GhostBtn
   }
 };
 </script>
+
+<style lang="scss" scoped>
+
+</style>
