@@ -25,6 +25,7 @@ $gold: #f0a500;
 $orange: #cf7500;
 $dark-grey: #41454e;
 $black: #1a1c20;
+$black-50: rgba(26, 28, 32, 0.6);
 $grey-3: #828282;
 $grey-4: #bdbdbd;
 
@@ -40,4 +41,10 @@ $radial_shadow: radial-gradient(
   circle,
   rgba(26, 28, 32, 0.33) 20%,
   rgba(26, 28, 32, 0.75) 100%
+);
+$bck-shadow: linear-gradient(
+  180deg,
+  rgba(26, 28, 32, 0.69) 7%,
+  rgba(26, 28, 32, 0.35) 16%,
+  rgba(26, 28, 32, 1) 99%
 );

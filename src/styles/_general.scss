@@ -1,5 +1,9 @@
 html.ticket {
-  background: url('./assets/img/bck-tickets.jpg');
+  min-height: 100vh;
+  background: $bck-shadow, url('./assets/img/bck-tickets.jpg');
+  //   background: url('./assets/img/bck-tickets.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 button {
@@ -41,6 +45,10 @@ h6 {
   line-height: 2.14em;
   letter-spacing: 0.05em;
   font-weight: bold;
+}
+
+label {
+  font-family: $font-h2;
 }
 
 p {
