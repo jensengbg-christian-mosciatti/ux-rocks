@@ -10,13 +10,14 @@ $font-links: 'Libre Franklin', sans-serif;
 $font-text: 'Libre Baskerville', serif;
 
 //*MARGINS
-$margin-v-h1: 1.63em;
-$margin-v-h2: 0.75em;
-$margin-v-button: 2.5em;
-$margin-v-section: 6.25em;
-$margin-v-img: 1.63em;
-$margin-v-p: 2.69em;
-
+$margin-v-h1: 1.86em;
+$margin-v-h2: 0.86em;
+$margin-v-button: 2.86em;
+$margin-v-section: 7.14em;
+$margin-v-img: 1.86em;
+$margin-v-p: 3.07em;
+//*PADDINGS
+$padding-p: 1.5em;
 
 //*COLORS
 $white: #f4f4f4;
@@ -40,43 +41,3 @@ $radial_shadow: radial-gradient(
   rgba(26, 28, 32, 0.33) 20%,
   rgba(26, 28, 32, 0.75) 100%
 );
-
-//*GENERAL STYLES
-button {
-  font-family: $font-button;
-  font-weight: 500;
-}
-
-a {
-  font-family: $font-links;
-  font-weight: 300;
-}
-
-h1 {
-  font-family: $font-title;
-  font-size: 2.85em;
-}
-h2 {
-  font-size: 1.53em;
-}
-h3 {
-  font-size: 1.43em;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $font-h2;
-  line-height: 1.88em;
-  font-weight: bold;
-}
-
-p {
-  font-family: $font-text;
-  line-height: 1.63em;
-}
-
-
-
