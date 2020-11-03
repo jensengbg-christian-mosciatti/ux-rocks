@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div>
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name" />
-    </div>
+    <Input label="Name" />
     <div>
       <label for="email">Email</label>
       <input type="text" name="email" id="email" />
@@ -12,7 +9,12 @@
 </template>
 
 <script>
-export default {}
+import Input from './InputField'
+export default {
+  components: {
+    Input,
+  },
+}
 </script>
 
 <style lang="scss" scoped>
