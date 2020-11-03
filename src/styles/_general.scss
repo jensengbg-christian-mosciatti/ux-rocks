@@ -1,0 +1,49 @@
+html.ticket {
+  background: url('./assets/img/bck-tickets.jpg');
+}
+
+button {
+  font-family: $font-button;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    box-shadow: none;
+  }
+}
+
+a {
+  font-family: $font-links;
+  font-weight: 300;
+}
+
+h1 {
+  font-family: $font-title;
+  font-size: 2.86em;
+}
+h2 {
+  font-size: 1.43em;
+}
+h3 {
+  font-size: 1.3em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-h2;
+  line-height: 2.14em;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+}
+
+p {
+  font-family: $font-text;
+  line-height: 1.86em;
+}

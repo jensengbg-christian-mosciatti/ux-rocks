@@ -1,5 +1,6 @@
 <template>
   <div id="nav">
+
     <router-link to="/">
       <img src="./assets/uxrocks.svg" alt="logo" />
     </router-link>
@@ -9,6 +10,7 @@
     <MenuModal v-if="showModal" @close="showModal = false">
       <h1>hej</h1>
     </MenuModal>
+
   </div>
   <router-view />
 </template>
@@ -41,6 +43,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/styles/_general';
+
 * {
   margin: 0;
   padding: 0;
@@ -53,12 +57,18 @@ export default {
   box-sizing: inherit;
 }
 
+html {
+  background-color: $black;
+}
+
 #app {
   // font-family: Avenir, Helvetica, Arial, sans-serif;
   // font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+
+  // text-align: center;
+
   // color: #2c3e50;
 }
 
@@ -76,17 +86,5 @@ export default {
   //     color: #42b983;
   //   }
   // }
-}
-
-button {
-  cursor: pointer;
-  border: none;
-
-  &:focus {
-    outline: none;
-  }
-  &:disabled {
-    box-shadow: none;
-  }
 }
 </style>
