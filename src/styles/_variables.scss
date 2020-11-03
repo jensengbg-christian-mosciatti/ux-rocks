@@ -6,7 +6,7 @@ $font-title: 'Lobster', cursive;
 $font-button: 'Libre Franklin', sans-serif;
 $font-h2: 'Libre Franklin', sans-serif;
 $font-links: 'Libre Franklin', sans-serif;
-
+$font-input: 'Libre Franklin', sans-serif;
 $font-text: 'Libre Baskerville', serif;
 
 //*MARGINS
@@ -17,6 +17,8 @@ $margin-v-button: 2.86em;
 $margin-v-section: 7.14em;
 $margin-v-img: 1.86em;
 $margin-v-p: 3.07em;
+$margin-v-inputfield: 0.75em;
+$margin-h-inputfield: 1.18em;
 //*PADDINGS
 $padding-p: 1.5em;
 
@@ -34,12 +36,58 @@ $btn-width: 140px;
 $btn-height: 40px;
 $btn-br: 10px 40px;
 
+//*INPUT
+$input-height: 40px;
+$input-br: 10px 40px;
+
 //*SHADOW
 $drop-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 $hover-glow: 0px 0px 8px 4px rgba(240, 165, 0, 0.78);
+$focus-glow-input: 0px 0px 8px 4px #F4F4F4;
 $radial_shadow: radial-gradient(
   circle,
   rgba(26, 28, 32, 0.33) 20%,
   rgba(26, 28, 32, 0.75) 100%
 );
 
+//*GENERAL STYLES
+button {
+  font-family: $font-button;
+  font-weight: 500;
+}
+
+a {
+  font-family: $font-links;
+  font-weight: 300;
+}
+
+h1 {
+  font-family: $font-title;
+  font-size: 2.85em;
+}
+h2 {
+  font-size: 1.53em;
+}
+h3 {
+  font-size: 1.43em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-h2;
+  line-height: 1.88em;
+  font-weight: bold;
+}
+
+p {
+  font-family: $font-text;
+  line-height: 1.63em;
+}
+
+input {
+  font-family: $font-text;
+  line-height: 1.63em;
+}
