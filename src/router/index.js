@@ -4,6 +4,7 @@ import Lineup from '../views/Lineup.vue'
 import Contact from '../views/Contact.vue'
 import Faq from '../views/Faq.vue'
 import Tickets from '../views/Tickets.vue'
+import Style from '../views/Style.vue'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/tickets',
     name: 'Tickets',
     component: Tickets,
+  },
+  {
+    path: '/style',
+    name: 'Style',
+    component: Style,
   },
   {
     path: '/about',
