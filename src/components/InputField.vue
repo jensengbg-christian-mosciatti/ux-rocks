@@ -45,7 +45,8 @@ input {
   color: $white;
   font-family: $font-input;
   outline-style: none;
-  text-indent: 2.5em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
   width: 100%;
 
   &:focus {
@@ -57,6 +58,8 @@ input {
     color: $dark-grey;
     box-shadow: none;
     border-color: $dark-grey;
+    border-width: 1px;
+    border-style: solid;
     cursor: auto;
   }
 }
@@ -67,9 +70,11 @@ textarea {
   border: none;
   box-shadow: $drop-shadow;
   color: $white;
+  resize: none;
   font-family: $font-input;
   outline-style: none;
-  text-indent: 2.5em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
   width: 100%;
   padding-top: 1em;
 
@@ -82,6 +87,8 @@ textarea {
     color: $dark-grey;
     box-shadow: none;
     border-color: $dark-grey;
+    border-width: 1px;
+    border-style: solid;
     cursor: auto;
   }
 }

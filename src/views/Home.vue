@@ -3,8 +3,7 @@
     <PrimaryBtn title="PRIMARY" />
     <GhostBtn title="GHOST" />
 
-    <!-- En container så man ser active-effekten (som är vit)-->
-    <div style="background-color: black; padding: 1.5em;">
+    <div style="width: 25em">
       <InputField label="Name" />
       <InputField label="Name" disabled />
       <InputField label="Message" multiline />
