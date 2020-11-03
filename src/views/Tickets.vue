@@ -32,7 +32,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  beforeCreate() {
+    document.documentElement.className = 'ticket'
+  },
+  beforeUnmount() {
+    document.documentElement.className = ''
+  },
+}
 </script>
 
 <style lang="scss" scoped>
