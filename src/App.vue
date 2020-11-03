@@ -1,6 +1,5 @@
 <template>
   <div id="nav">
-
     <router-link to="/">
       <img src="./assets/uxrocks.svg" alt="logo" />
     </router-link>
@@ -10,7 +9,6 @@
     <MenuModal v-if="showModal" @close="showModal = false">
       <h1>hej</h1>
     </MenuModal>
-
   </div>
   <router-view />
 </template>
@@ -45,20 +43,19 @@ export default {
 <style lang="scss">
 @import '@/styles/_general';
 
+html {
+  box-sizing: border-box;
+  background-color: $black;
+}
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-}
-
-html {
-  background-color: $black;
 }
 
 #app {
