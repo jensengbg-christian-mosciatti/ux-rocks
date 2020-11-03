@@ -40,4 +40,16 @@
     }
   }
 }
+
+button {
+  cursor: pointer;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    box-shadow: none;
+  }
+}
 </style>

@@ -17,6 +17,7 @@ $margin-v-section: 6.25em;
 $margin-v-img: 1.63em;
 $margin-v-p: 2.69em;
 
+
 //*COLORS
 $white: #f4f4f4;
 $gold: #f0a500;
@@ -26,12 +27,21 @@ $black: #1a1c20;
 $grey-3: #828282;
 $grey-4: #bdbdbd;
 
+//*BUTTONS
+$btn-width: 140px;
+$btn-height: 40px;
+$btn-br: 10px 40px;
+
+//*SHADOW
+$drop-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$hover-glow: 0px 0px 8px 4px rgba(240, 165, 0, 0.78);
 $radial_shadow: radial-gradient(
   circle,
   rgba(26, 28, 32, 0.33) 20%,
   rgba(26, 28, 32, 0.75) 100%
 );
 
+//*GENERAL STYLES
 button {
   font-family: $font-button;
   font-weight: 500;
@@ -67,3 +77,6 @@ p {
   font-family: $font-text;
   line-height: 1.63em;
 }
+
+
+
