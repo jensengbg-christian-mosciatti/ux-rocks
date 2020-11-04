@@ -34,19 +34,21 @@ export default {}
   z-index: 10;
 
   .close {
-
     cursor: pointer;
-    margin: 21px;
-
     display: flex;
     justify-content: flex-end;
     img {
+      height: 30px;
+      width: 30px;
       cursor: pointer;
+      position: absolute;
+      top: $margin-hamburger;
+      right: $margin-hamburger;
     }
   }
 
   .links {
-    height: 80%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,20 +56,15 @@ export default {}
 
     a {
       font-family: $font-h2;
-      font-size: 1.53em;
+      font-size: 20px;
       text-decoration: none;
       color: #ffffff;
       font-weight: bold;
       margin: 24px;
 
-      &:hover,
-      &.router-link-exact-active {
+      &:hover {
         color: $gold;
       }
-    }
-    a.router-link-active {
-      color: $gold;
-      cursor: pointer;
     }
   }
 }

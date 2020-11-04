@@ -15,17 +15,22 @@ export default {
 
 <style lang="scss" scoped>
     .primary-btn {
+        font-family: $font-button;
+        font-weight: 500;
+        font-size: 12px;
         background-color: $gold;
         width: $btn-width;
         height: $btn-height;
         border-radius: $btn-br;
         box-shadow: $drop-shadow;
         color: $black;
+        margin: $margin-v-button;
+        transition: 0.2s;
         &:hover{
             box-shadow: $hover-glow;
         }
         &:active{
-            background-color: $black;
+            background-color: transparent;
             color: $gold;
         }
         &:disabled{
