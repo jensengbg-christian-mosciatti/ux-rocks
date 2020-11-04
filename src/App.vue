@@ -4,11 +4,15 @@
       <img src="./assets/uxrocks.svg" alt="logo" />
     </router-link>
 
-    <img @click="showModal = true" src="./assets/menu.svg" alt="menu" />
+    <img
+      class="hamburger-menu"
+      @click="showModal = true"
+      src="./assets/menu.svg"
+      alt="menu"
+    />
 
-    <MenuModal v-if="showModal" @close="showModal = false">
-      <h1>hej</h1>
-    </MenuModal>
+    <MenuModal v-if="showModal" @close="showModal = false" />
+
   </div>
   <router-view />
 </template>
@@ -24,19 +28,6 @@ export default {
   components: {
     MenuModal,
   },
-  // methods: {
-  //   showMenuModal() {
-  //     this.showModal = true
-  //   },
-  //   closeMenuModal() {
-  //     this.showModal = false
-  //   },
-  // },
-  // data() {
-  //   return {
-  //     showModal: false,
-  //   }
-  // },
 }
 </script>
 
@@ -59,14 +50,8 @@ html {
 }
 
 #app {
-  // font-family: Avenir, Helvetica, Arial, sans-serif;
-  // font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  // text-align: center;
-
-  // color: #2c3e50;
 }
 
 #nav {
@@ -83,5 +68,8 @@ html {
   //     color: #42b983;
   //   }
   // }
+  .hamburger-menu {
+    cursor: pointer;
+  }
 }
 </style>
