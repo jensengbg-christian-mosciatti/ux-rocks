@@ -56,20 +56,15 @@ export default {}
 
     a {
       font-family: $font-h2;
-      font-size: 1.53em;
+      font-size: 20px;
       text-decoration: none;
       color: #ffffff;
       font-weight: bold;
       margin: 24px;
 
-      &:hover,
-      &.router-link-exact-active {
+      &:hover {
         color: $gold;
       }
-    }
-    a.router-link-active {
-      color: $gold;
-      cursor: pointer;
     }
   }
 }
