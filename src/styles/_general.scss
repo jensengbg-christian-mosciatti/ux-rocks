@@ -1,9 +1,11 @@
 html.ticket {
   min-height: 100vh;
+  background-color: $black;
   background: $bck-shadow, url('./assets/img/bck-tickets.jpg');
   //   background: url('./assets/img/bck-tickets.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .home-bg {
@@ -85,7 +87,7 @@ p {
 }
 
 input {
-  font-family: $font-text;
+  font-family: $font-input;
   line-height: 1.63em;
 }
 
