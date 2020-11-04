@@ -30,7 +30,7 @@ export default {
   .artist-name {
     color: $white;
     position: absolute;
-    z-index: 999;
+    z-index: 2;
     bottom: 20px;
     right: 20px;
     pointer-events: none;
