@@ -1,10 +1,10 @@
 <template>
   <div id="lineup">
-      <Artist pic="metallica.jpg" type="highlight"/>
-      <Artist pic="system-of-a-down.jpg" type="highlight"/>
-      <Artist pic="jan.jpg" type="rest"/>
-      <Artist pic="tired-lion.jpg" type="rest"/>
-      <Artist pic="ad.jpg" type="rest"/>
+      <Artist name="Metallica" pic="metallica.jpg" type="highlight"/>
+      <Artist name="System of a Down" pic="system-of-a-down.jpg" type="highlight"/>
+      <Artist name="Tonight Alive" pic="jan.jpg" type="rest"/>
+      <Artist name="Tired Lion" pic="tired-lion.jpg" type="rest"/>
+      <Artist name="Antagonist A.D" pic="ad.jpg" type="rest"/>
   </div>
 </template>
 
