@@ -24,9 +24,9 @@
         </article>
       </div>
       <div class="inner-box ticket-box">
+        <h2>Title</h2>
         <Ticket />
 
-        <h2>Title</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
           pariatur inventore laboriosam maxime. Ipsum repellendus magnam ea
@@ -74,16 +74,15 @@ main {
   position: relative;
 }
 .divider {
+  visibility: hidden;
   position: absolute;
-  // top: 10%;
-  width: 90%;
-  height: 100%;
-  border-bottom: 1px solid $gold;
+  width: 0;
+  height: 0;
 }
 .inner-box {
   padding: $padding-p;
   background-color: $black-50;
-  max-width: 20em;
+  max-width: 28em;
 }
 
 article:not(:last-of-type) {
@@ -109,11 +108,13 @@ p {
     grid-template: 1fr / 1fr 1fr;
   }
   .divider {
+    visibility: visible;
     position: absolute;
     top: 10%;
     width: 50%;
     height: 80%;
     border-right: 1px solid $gold;
+    z-index: -1;
   }
 }
 </style>

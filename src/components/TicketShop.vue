@@ -1,10 +1,7 @@
 <template>
   <div>
-    <Input label="Name" />
-    <div>
-      <label for="email">Email</label>
-      <input type="text" name="email" id="email" />
-    </div>
+    <Input class="input inputName" label="Name" />
+    <Input class="input inputEmail" label="Email" />
   </div>
 </template>
 
@@ -18,7 +15,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-label {
-  color: $white;
+.input {
+  margin-left: 0;
+  margin-right: 0;
 }
 </style>
