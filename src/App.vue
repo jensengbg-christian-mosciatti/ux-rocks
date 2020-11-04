@@ -11,8 +11,15 @@
       alt="menu"
     />
 
-    <MenuModal v-if="showModal" @close="showModal = false" />
+    <div class="desktop-menu">
+      <router-link @click="$emit('close')" to="/">HOME</router-link>
+      <router-link @click="$emit('close')" to="/lineup">LINEUP</router-link
+      ><router-link @click="$emit('close')" to="/tickets">TICKETS</router-link
+      ><router-link @click="$emit('close')" to="/contact">CONTACT</router-link
+      ><router-link @click="$emit('close')" to="/faq">FAQ</router-link>
+    </div>
 
+    <MenuModal v-if="showModal" @close="showModal = false" />
   </div>
   <router-view />
 </template>
@@ -60,16 +67,35 @@ html {
   justify-content: space-between;
   align-items: center;
 
-  // a {
-  //   font-weight: bold;
-  //   color: #2c3e50;
-
-  //   &.router-link-exact-active {
-  //     color: #42b983;
-  //   }
-  // }
   .hamburger-menu {
     cursor: pointer;
+    display: none;
+  }
+  .desktop-menu {
+    a {
+      font-family: $font-h2;
+      font-size: 20px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      margin: 24px;
+
+      &:hover {
+        color: $gold;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1000px) {
+  #nav {
+    .hamburger-menu {
+      display: block;
+    }
+  }
+
+  .desktop-menu {
+    display: none;
   }
 }
 </style>
