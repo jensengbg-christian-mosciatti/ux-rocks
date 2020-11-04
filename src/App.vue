@@ -12,6 +12,7 @@
     />
 
     <MenuModal v-if="showModal" @close="showModal = false" />
+
   </div>
   <router-view />
 </template>
@@ -33,20 +34,19 @@ export default {
 <style lang="scss">
 @import '@/styles/_general';
 
+html {
+  box-sizing: border-box;
+  background-color: $black;
+}
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-}
-
-html {
-  background-color: $black;
 }
 
 #app {

@@ -31,9 +31,13 @@ export default {}
   height: 100%;
   background-color: $black;
   opacity: 0.9;
+  z-index: 10;
 
   .close {
-    margin: $margin-v-img;
+
+    cursor: pointer;
+    margin: 21px;
+
     display: flex;
     justify-content: flex-end;
     img {
@@ -55,6 +59,11 @@ export default {}
       color: #ffffff;
       font-weight: bold;
       margin: 24px;
+
+      &:hover,
+      &.router-link-exact-active {
+        color: $gold;
+      }
     }
     a.router-link-active {
       color: $gold;

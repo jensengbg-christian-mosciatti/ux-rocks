@@ -4,14 +4,14 @@
       <h1>Tickets</h1>
     </section>
     <section class="main-cont">
+      <div class="divider"></div>
       <div class="inner-box info-box">
         <article>
           <h2>How to get tickets</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
-            pariatur inventore laboriosam maxime. Ipsum repellendus magnam ea
-            officiis nisi fugiat, nobis facere atque eos. Expedita odit
-            explicabo dignissimos architecto unde.
+            You can buy tickets online right here in this page. <br />
+            If you don't want to buy tickets online, we have 10 ticket windows
+            at the entrance of the hall.
           </p>
         </article>
         <article>
@@ -24,15 +24,33 @@
         </article>
       </div>
       <div class="inner-box ticket-box">
+        <Ticket />
+
         <h2>Title</h2>
-        <p>Paragraph</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
+          pariatur inventore laboriosam maxime. Ipsum repellendus magnam ea
+          officiis nisi fugiat, nobis facere atque eos. Expedita odit explicabo
+          dignissimos architecto unde. Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Cupiditate pariatur inventore laboriosam maxime.
+          Ipsum repellendus magnam ea officiis nisi fugiat, nobis facere atque
+          eos. Expedita odit explicabo dignissimos architecto unde. Lorem ipsum
+          dolor sit amet consectetur, adipisicing elit. Cupiditate pariatur
+          inventore laboriosam maxime. Ipsum repellendus magnam ea officiis nisi
+          fugiat, nobis facere atque eos. Expedita odit explicabo dignissimos
+          architecto unde.
+        </p>
       </div>
     </section>
   </main>
 </template>
 
 <script>
+import Ticket from '@/components/TicketShop.vue'
 export default {
+  components: {
+    Ticket,
+  },
   beforeCreate() {
     document.documentElement.className = 'ticket'
   },
@@ -43,10 +61,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-body {
-  background: url('../assets/img/bck-tickets.jpg');
-  background-color: pink;
-}
 main {
   display: flex;
   flex-direction: column;
@@ -54,16 +68,25 @@ main {
 }
 .main-cont {
   display: grid;
-  column-gap: 2em;
-  grid-template: 1fr / 1fr 1fr;
+  column-gap: 10em;
+  // grid-template: 1fr 1fr / 1fr;
+  grid-template: max-content max-content / 1fr;
+  position: relative;
 }
-
+.divider {
+  position: absolute;
+  // top: 10%;
+  width: 90%;
+  height: 100%;
+  border-bottom: 1px solid $gold;
+}
 .inner-box {
   padding: $padding-p;
+  background-color: $black-50;
+  max-width: 20em;
 }
 
 article:not(:last-of-type) {
-  max-width: 20em;
   margin-bottom: $margin-v-p;
 }
 
@@ -81,6 +104,16 @@ p {
   // padding: $margin-v-p 1em;
 }
 
-@media screen {
+@media only screen and (min-width: 1000px) {
+  .main-cont {
+    grid-template: 1fr / 1fr 1fr;
+  }
+  .divider {
+    position: absolute;
+    top: 10%;
+    width: 50%;
+    height: 80%;
+    border-right: 1px solid $gold;
+  }
 }
 </style>
