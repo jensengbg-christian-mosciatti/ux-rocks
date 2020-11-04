@@ -103,7 +103,7 @@ p {
   // padding: $margin-v-p 1em;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: $desktop-query) {
   .main-cont {
     grid-template: 1fr / 1fr 1fr;
   }

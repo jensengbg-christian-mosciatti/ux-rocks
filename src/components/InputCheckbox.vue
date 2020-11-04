@@ -83,31 +83,4 @@ input {
     color: $dark-grey;
   }
 }
-// input {
-//   background-color: $dark-grey;
-//   height: $input-height;
-//   border-radius: $input-br;
-//   border: none;
-//   box-shadow: $drop-shadow;
-//   color: $white;
-//   font-family: $font-input;
-//   outline-style: none;
-//   padding-left: 2.5em;
-//   padding-right: 2.5em;
-//   width: 100%;
-
-//   &:focus {
-//     box-shadow: $focus-glow-input;
-//   }
-
-//   &:disabled {
-//     background-color: $black;
-//     color: $dark-grey;
-//     box-shadow: none;
-//     border-color: $dark-grey;
-//     border-width: 1px;
-//     border-style: solid;
-//     cursor: auto;
-//   }
-// }
 </style>
