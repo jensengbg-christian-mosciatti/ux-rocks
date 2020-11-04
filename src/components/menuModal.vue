@@ -1,7 +1,12 @@
 <template>
   <div class="menuModal">
     <div class="close">
-      <img @click="$emit('close')" src="../assets/X.svg" alt="X" />
+      <img
+        class="close-x"
+        @click="$emit('close')"
+        src="../assets/X.svg"
+        alt="X"
+      />
     </div>
     <div class="links">
       <router-link @click="$emit('close')" to="/">HOME</router-link>
@@ -28,9 +33,12 @@ export default {}
   opacity: 0.9;
 
   .close {
-    margin: 21px;
+    margin: $margin-v-img;
     display: flex;
     justify-content: flex-end;
+    img {
+      cursor: pointer;
+    }
   }
 
   .links {
@@ -39,6 +47,7 @@ export default {}
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     a {
       font-family: $font-h2;
       font-size: 1.53em;
@@ -46,6 +55,10 @@ export default {}
       color: #ffffff;
       font-weight: bold;
       margin: 24px;
+    }
+    a.router-link-active {
+      color: $gold;
+      cursor: pointer;
     }
   }
 }
