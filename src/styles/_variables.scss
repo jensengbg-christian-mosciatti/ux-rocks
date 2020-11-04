@@ -1,5 +1,5 @@
 //*FONTS
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Libre+Franklin:wght@300;500;700&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Libre+Franklin:wght@300;400;500;700&family=Lobster&display=swap');
 
 $font-title: 'Lobster', cursive;
 $font-button: 'Libre Franklin', sans-serif;
@@ -12,7 +12,7 @@ $font-text: 'Libre Baskerville', serif;
 $margin-v-h1: 1.86em;
 $margin-v-h2: 0.86em;
 $margin-v-button: 2.86em;
-$margin-v-section: 7.14em;
+$margin-v-section: 3.3em;
 $margin-v-img: 1.86em;
 $margin-v-p: 3.07em;
 $margin-v-inputfield: 0.75em;
@@ -55,3 +55,4 @@ $bck-shadow: linear-gradient(
   rgba(26, 28, 32, 0.35) 16%,
   rgba(26, 28, 32, 1) 99%
 );
+$bg-shadow-home: linear-gradient(180deg, rgba(0, 0, 0, 0.57) 0%, #1A1C20 100%);

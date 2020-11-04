@@ -6,6 +6,15 @@ html.ticket {
   background-size: cover;
 }
 
+.home-bg {
+  background: $bg-shadow-home, url('./assets/img/home-bg.png');
+  background-color: $black; /* Used if the image is unavailable */
+  height: 110vh; /* You must set a specified height */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center;
+}
+
 button {
   font-family: $font-button;
   font-weight: 500;
@@ -26,11 +35,18 @@ a {
 }
 
 h1 {
+  text-align: center;
   font-family: $font-title;
   font-size: 2.86em;
+  letter-spacing: 2px;
+  line-height: 50px;
+  font-weight: 400;
 }
 h2 {
-  font-size: 1.43em;
+  font-size: 1.2em;
+  margin: $margin-v-h2;
+  font-weight: 700;
+  color: white;
 }
 h3 {
   font-size: 1.3em;
@@ -54,9 +70,29 @@ label {
 p {
   font-family: $font-text;
   line-height: 1.86em;
+  font-size: 14px;
+  color: white;
+}
+
+.small-p {
+  font-family: $font-text;
+  line-height: 1.86em;
+  color: $white;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  line-height: 26px;
+  font-weight: 400;
 }
 
 input {
   font-family: $font-text;
   line-height: 1.63em;
+}
+
+.white {
+  color: $white;
+}
+
+.gold {
+  color: $gold;
 }

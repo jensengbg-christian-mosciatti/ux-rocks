@@ -14,6 +14,9 @@ export default {
 
 <style lang="scss" scoped>
     .ghost-btn {
+        font-family: $font-button;
+        font-weight: 500;
+        font-size: 12px;
         background-color: transparent;
         border: 1px solid $gold;
         width: $btn-width;
@@ -21,6 +24,8 @@ export default {
         border-radius: $btn-br;
         box-shadow: $drop-shadow;
         color: $gold;
+        margin: $margin-v-button;
+        transition: 0.2s;
         &:hover{
             box-shadow: $hover-glow;
         }
