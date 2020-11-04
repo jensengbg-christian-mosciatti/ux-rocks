@@ -70,6 +70,11 @@ html {
   // }
   .hamburger-menu {
     cursor: pointer;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: $margin-hamburger;
+    right: $margin-hamburger;
   }
 }
 </style>
