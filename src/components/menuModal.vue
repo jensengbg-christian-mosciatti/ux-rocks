@@ -35,17 +35,20 @@ export default {}
 
   .close {
     cursor: pointer;
-    margin: 21px;
-
     display: flex;
     justify-content: flex-end;
     img {
+      height: 30px;
+      width: 30px;
       cursor: pointer;
+      position: absolute;
+      top: $margin-hamburger;
+      right: $margin-hamburger;
     }
   }
 
   .links {
-    height: 80%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
