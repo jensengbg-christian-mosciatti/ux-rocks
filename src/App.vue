@@ -87,7 +87,7 @@ html {
   }
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: $desktop-query) {
   #nav {
     .hamburger-menu {
       display: block;
