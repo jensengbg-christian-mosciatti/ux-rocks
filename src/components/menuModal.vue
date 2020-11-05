@@ -55,13 +55,6 @@ export default {}
     justify-content: center;
 
     a {
-      font-family: $font-h2;
-      font-size: 20px;
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: bold;
-      margin: 24px;
-
       &:hover {
         color: $gold;
       }

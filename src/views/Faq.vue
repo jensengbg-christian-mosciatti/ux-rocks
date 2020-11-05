@@ -1,7 +1,17 @@
-<template> <div></div> </template>
+<template>
+  <div>
+    <InputStepper label="Participants" />
+  </div>
+</template>
 
 <script>
-export default {}
+import InputStepper from '@/components/InputStepper.vue'
+
+export default {
+  components: {
+    InputStepper,
+  },
+}
 </script>
 
 <style></style>

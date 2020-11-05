@@ -49,7 +49,7 @@ input {
   padding-right: 2.5em;
   width: 100%;
 
-  &:focus {
+  input:focus {
     box-shadow: $focus-glow-input;
   }
 
