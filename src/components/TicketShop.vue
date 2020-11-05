@@ -25,23 +25,26 @@
       label="Participants"
     />
     <hr class="shop-divider" />
-    <div>
+    <div class="shop-summary">
       <div class="shop-line">
         <h2>{{ ticketType }}</h2>
         <span></span>
-        <h2>{{ ticketPrice }}</h2>
+        <h2>{{ addKr(ticketPrice) }}</h2>
       </div>
       <div class="shop-line">
         <h2>Participants</h2>
         <span></span>
         <h2>{{ participants }}</h2>
       </div>
-      <hr />
+      <hr class="total-divider" />
       <div class="shop-line">
         <h2>Total</h2>
         <span></span>
-        <h2>{{ ticketTotalPrice }}</h2>
+        <h2>{{ addKr(ticketTotalPrice) }}</h2>
       </div>
+    </div>
+    <div class="btn-cont">
+      <PrimaryBtn :disabled="!ticketTotalPrice" title="CHECKOUT" />
     </div>
   </div>
 </template>
@@ -50,6 +53,7 @@
 import Input from './InputField'
 import InputChckBox from './InputCheckbox'
 import InputStepper from './InputStepper'
+import PrimaryBtn from '@/components/PrimaryBtn'
 export default {
   data() {
     return {
@@ -62,6 +66,9 @@ export default {
     ticketType() {
       let str = ''
       switch (this.days) {
+        case 0:
+          str = 'Choose a ticket'
+          break
         case 1:
           str = 'One day ticket'
           break
@@ -85,10 +92,15 @@ export default {
     Input,
     InputChckBox,
     InputStepper,
+    PrimaryBtn,
   },
   methods: {
     updTicketDays(value) {
       this.days = this.days + (value === true ? 1 : -1)
+    },
+    addKr(value) {
+      // if (!value || value === 0) return ''
+      return value + ' Kr'
     },
   },
 }
@@ -97,6 +109,7 @@ export default {
 <style lang="scss" scoped>
 h2 {
   line-height: 1em;
+  font-weight: 500;
 }
 
 .input {
@@ -118,7 +131,11 @@ h2 {
   margin: $margin-v-section;
   border-color: $gold;
 }
-
+.total-divider {
+  border-width: 2px;
+  border-color: $white;
+  border-style: solid;
+}
 .shop-line {
   display: flex;
   justify-content: space-between;
@@ -130,5 +147,26 @@ h2 {
     flex-grow: 1;
     height: 1em;
   }
+}
+
+.shop-line:nth-of-type(2) {
+  margin-bottom: 1em;
+}
+.shop-line:nth-last-of-type(1) {
+  margin-top: 1em;
+}
+
+.shop-summary {
+  margin-bottom: $margin-v-section;
+}
+
+.btn-cont {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-cont button {
+  width: 90%;
+  margin: 0 0 $margin-v-section 0;
 }
 </style>

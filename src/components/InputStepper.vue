@@ -56,7 +56,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: $black;
+  // background-color: $black;
   margin-top: $margin-v-inputfield;
 }
 

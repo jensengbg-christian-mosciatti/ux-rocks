@@ -26,20 +26,6 @@
       <div class="inner-box ticket-box">
         <h2>Buy Tickets Online</h2>
         <Ticket />
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
-          pariatur inventore laboriosam maxime. Ipsum repellendus magnam ea
-          officiis nisi fugiat, nobis facere atque eos. Expedita odit explicabo
-          dignissimos architecto unde. Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Cupiditate pariatur inventore laboriosam maxime.
-          Ipsum repellendus magnam ea officiis nisi fugiat, nobis facere atque
-          eos. Expedita odit explicabo dignissimos architecto unde. Lorem ipsum
-          dolor sit amet consectetur, adipisicing elit. Cupiditate pariatur
-          inventore laboriosam maxime. Ipsum repellendus magnam ea officiis nisi
-          fugiat, nobis facere atque eos. Expedita odit explicabo dignissimos
-          architecto unde.
-        </p>
       </div>
     </section>
   </main>
@@ -66,10 +52,14 @@ main {
   flex-direction: column;
   align-items: center;
 }
+
+.title {
+  margin: $margin-v-section;
+}
+
 .main-cont {
   display: grid;
   column-gap: 10em;
-  // grid-template: 1fr 1fr / 1fr;
   grid-template: max-content max-content / 1fr;
   position: relative;
 }
