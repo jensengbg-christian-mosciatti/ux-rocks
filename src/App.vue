@@ -11,7 +11,7 @@
       alt="menu"
     />
 
-    <div class="desktop-menu">
+    <div class="links">
       <router-link @click="$emit('close')" to="/">HOME</router-link>
       <router-link @click="$emit('close')" to="/lineup">LINEUP</router-link
       ><router-link @click="$emit('close')" to="/tickets">TICKETS</router-link
@@ -76,15 +76,8 @@ html {
     right: $margin-hamburger;
     display: none;
   }
-  .desktop-menu {
+  .links {
     a {
-      font-family: $font-h2;
-      font-size: 20px;
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: bold;
-      margin: 24px;
-
       &:hover {
         color: $gold;
       }
@@ -99,7 +92,7 @@ html {
     }
   }
 
-  .desktop-menu {
+  .links {
     display: none;
   }
 }
