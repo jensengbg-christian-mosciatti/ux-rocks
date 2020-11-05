@@ -17,6 +17,20 @@ html.ticket {
   background-position: center;
 }
 
+.links {
+  a {
+    font-family: $font-h2;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 24px;
+  }
+  &:hover {
+    color: $gold;
+  }
+}
+
 button {
   font-family: $font-button;
   font-weight: 500;
