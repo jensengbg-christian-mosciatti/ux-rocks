@@ -17,6 +17,16 @@ html.ticket {
   background-position: center;
 }
 
+html.lineup {
+  min-height: 100vh;
+  background-color: $black;
+  background: $lineup-shadow, url('./assets/img/lineup-bg.jpg');
+  //   background: url('./assets/img/bck-tickets.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .links {
   a {
     font-family: $font-h2;
