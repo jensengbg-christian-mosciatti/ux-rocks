@@ -24,7 +24,7 @@
         </article>
       </div>
       <div class="inner-box ticket-box">
-        <h2>Title</h2>
+        <h2>Buy Tickets Online</h2>
         <Ticket />
 
         <p>

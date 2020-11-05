@@ -6,34 +6,38 @@
       <InputChckBox
         class="inputCb"
         label="Thursday"
-        @upd-days="updTicketDays($event)"
+        @handle-chk-box="updTicketDays($event)"
       />
       <InputChckBox
         class="inputCb"
         label="Friday"
-        @upd-days="updTicketDays($event)"
+        @handle-chk-box="updTicketDays($event)"
       />
       <InputChckBox
         class="inputCb"
         label="Saturday"
-        @upd-days="updTicketDays($event)"
+        @handle-chk-box="updTicketDays($event)"
       />
     </div>
-    <InputChckBox class="inputCb" label="PlaceHolder" />
-    <hr />
+    <InputStepper
+      v-model:stepper="participants"
+      class="inputStp"
+      label="Participants"
+    />
+    <hr class="shop-divider" />
     <div>
-      <div>
+      <div class="shop-line">
         <h2>{{ ticketType }}</h2>
         <span></span>
         <h2>{{ ticketPrice }}</h2>
       </div>
-      <div>
+      <div class="shop-line">
         <h2>Participants</h2>
         <span></span>
         <h2>{{ participants }}</h2>
       </div>
       <hr />
-      <div>
+      <div class="shop-line">
         <h2>Total</h2>
         <span></span>
         <h2>{{ ticketTotalPrice }}</h2>
@@ -45,6 +49,7 @@
 <script>
 import Input from './InputField'
 import InputChckBox from './InputCheckbox'
+import InputStepper from './InputStepper'
 export default {
   data() {
     return {
@@ -79,25 +84,51 @@ export default {
   components: {
     Input,
     InputChckBox,
+    InputStepper,
   },
   methods: {
     updTicketDays(value) {
-      console.log('value is:', value)
-      this.days = this.days + value
+      this.days = this.days + (value === true ? 1 : -1)
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
+h2 {
+  line-height: 1em;
+}
+
 .input {
   margin-left: 0;
   margin-right: 0;
+}
+
+.inputStp {
+  margin-top: 2 * $margin-v-inputfield;
 }
 
 .cb-cont {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: $margin-v-inputfield;
+}
+.shop-divider {
+  margin: $margin-v-section;
+  border-color: $gold;
+}
+
+.shop-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 0;
+
+  span {
+    border-bottom: 1px solid $white;
+    margin: 0 0.5em;
+    flex-grow: 1;
+    height: 1em;
+  }
 }
 </style>

@@ -21,9 +21,7 @@ export default {
   },
   methods: {
     handleInput(e) {
-      console.log('target is: ', e)
-      const value = e.target.checked === true ? 1 : -1
-      this.$emit('upd-days', value)
+      this.$emit('handle-chk-box', e.target.checked)
     },
   },
 }
