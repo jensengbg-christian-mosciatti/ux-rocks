@@ -1,6 +1,12 @@
 <template>
   <div class="inputContainer">
-    <input :disabled="disabled" type="checkbox" :name="label" :id="label" />
+    <input
+      @input="handleInput"
+      :disabled="disabled"
+      type="checkbox"
+      :name="label"
+      :id="label"
+    />
     <label :for="label"
       >{{ label }}<span class="checkmark">&#8515;</span></label
     >
@@ -12,6 +18,11 @@ export default {
   props: {
     label: String,
     disabled: Boolean,
+  },
+  methods: {
+    handleInput(e) {
+      this.$emit('handle-chk-box', e.target.checked)
+    },
   },
 }
 </script>

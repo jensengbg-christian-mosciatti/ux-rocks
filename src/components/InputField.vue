@@ -28,6 +28,7 @@ export default {
 }
 
 p {
+  padding-left: 1.07em;
   color: $white;
   font-family: $font-input;
 }
