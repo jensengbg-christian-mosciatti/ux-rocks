@@ -21,20 +21,25 @@
 export default {
   props: {
     label: String,
+    stepper: Number,
   },
-  data() {
-    return {
-      stepper: 1,
-    }
-  },
+  // data() {
+  //   return {
+  //     stepper: 1,
+  //   }
+  // },
 
   methods: {
     increaseStepper(increaseLimit) {
-      if (this.stepper < increaseLimit) this.stepper++
+      // if (this.stepper < increaseLimit) this.stepper++
+      if (this.stepper < increaseLimit)
+        this.$emit('update:stepper', this.stepper + 1)
     },
 
     decreaseStepper(decreaseLimit) {
-      if (this.stepper > decreaseLimit) this.stepper--
+      // if (this.stepper > decreaseLimit) this.stepper--
+      if (this.stepper > decreaseLimit)
+        this.$emit('update:stepper', this.stepper - 1)
     },
   },
 }
@@ -45,7 +50,8 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: $black;
+  // background-color: $black;
+  margin-top: $margin-v-inputfield;
 }
 
 .innerContainer {
@@ -98,7 +104,7 @@ export default {
 
 p {
   font-family: $font-label;
-  font-size: 0.75em;
+  font-size: 1em;
 }
 
 .label {

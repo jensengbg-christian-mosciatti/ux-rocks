@@ -17,6 +17,16 @@ html.ticket {
   background-position: center;
 }
 
+html.lineup {
+  min-height: 100vh;
+  background-color: $black;
+  background: $lineup-shadow, url('./assets/img/lineup-bg.jpg');
+  //   background: url('./assets/img/bck-tickets.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .links {
   a {
     font-family: $font-h2;
@@ -60,7 +70,8 @@ h1 {
 }
 h2 {
   font-size: 1.2em;
-  margin: $margin-v-h2;
+  // margin: $margin-v-h2;
+
   font-weight: 700;
   color: white;
 }
@@ -77,6 +88,11 @@ h6 {
   line-height: 2.14em;
   letter-spacing: 0.05em;
   font-weight: bold;
+
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 label {
@@ -86,10 +102,9 @@ label {
 p {
   font-family: $font-text;
   line-height: 1.86em;
-  font-size: 14px;
-  color: white;
+  font-size: 1em;
+  color: $white;
 }
-
 
 .small-p {
   font-family: $font-text;
@@ -104,9 +119,8 @@ p {
 input {
   font-family: $font-input;
   line-height: 1.63em;
+  font-weight: 500;
 }
-
-
 
 .white {
   color: $white;
