@@ -37,12 +37,6 @@ export default {
       if (this.stepper > decreaseLimit) this.stepper--
     },
   },
-
-  computed: {
-    output() {
-      return this.stepper >= 10 ? '10 or more' : 'Less than 10'
-    },
-  },
 }
 </script>
 
