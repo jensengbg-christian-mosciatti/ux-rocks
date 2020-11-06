@@ -13,15 +13,19 @@
 
     <div class="links">
       <router-link @click="$emit('close')" to="/">HOME</router-link>
-      <router-link @click="$emit('close')" to="/lineup">LINEUP</router-link
-      ><router-link @click="$emit('close')" to="/tickets">TICKETS</router-link
-      ><router-link @click="$emit('close')" to="/contact">CONTACT</router-link
-      ><router-link @click="$emit('close')" to="/faq">FAQ</router-link>
+      <router-link @click="$emit('close')" to="/lineup">LINEUP</router-link>
+      <router-link @click="$emit('close')" to="/tickets">TICKETS</router-link>
+      <router-link @click="$emit('close')" to="/contact">CONTACT</router-link>
+      <router-link @click="$emit('close')" to="/faq">FAQ</router-link>
     </div>
 
     <MenuModal v-if="showModal" @close="showModal = false" />
   </div>
-  <router-view />
+  <router-view v-slot="{ Component }">
+    <transition name="fade">
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
 
 <script>
@@ -83,6 +87,20 @@ html {
       }
     }
   }
+}
+.fade-enter-active, 
+.fade-leave-active {
+  transition: opacity .3s ease-in-out;
+}
+
+.fade-enter, 
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to, 
+.fade-leave {
+  opacity: 0;
 }
 
 @media all and (max-width: $desktop-query) {
