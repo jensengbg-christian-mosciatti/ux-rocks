@@ -37,12 +37,6 @@ export default {
   components: {
     Ticket,
   },
-  beforeCreate() {
-    document.documentElement.className = 'ticket'
-  },
-  beforeUnmount() {
-    document.documentElement.className = ''
-  },
 }
 </script>
 
