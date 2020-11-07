@@ -98,9 +98,20 @@ export default {
     updTicketDays(value) {
       this.days = this.days + (value === true ? 1 : -1)
     },
+    addSpaces(nStr) {
+      nStr += ''
+      const x = nStr.split('.')
+      let x1 = x[0]
+      const x2 = x.length > 1 ? '.' + x[1] : ''
+      const rgx = /(\d+)(\d{3})/
+      while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ' ' + '$2')
+      }
+      return x1 + x2
+    },
     addKr(value) {
       // if (!value || value === 0) return ''
-      return value + ' Kr'
+      return this.addSpaces(value) + ' Kr'
     },
   },
 }
@@ -135,6 +146,7 @@ h2 {
   border-width: 2px;
   border-color: $white;
   border-style: solid;
+  margin: 1em 0;
 }
 .shop-line {
   display: flex;
@@ -149,12 +161,12 @@ h2 {
   }
 }
 
-.shop-line:nth-of-type(2) {
-  margin-bottom: 1em;
-}
-.shop-line:nth-last-of-type(1) {
-  margin-top: 1em;
-}
+// .shop-line:nth-last-of-type(2) {
+//   margin-bottom: 1em;
+// }
+// .shop-line:nth-last-of-type(1) {
+//   margin-top: 1em;
+// }
 
 .shop-summary {
   margin-bottom: $margin-v-section;

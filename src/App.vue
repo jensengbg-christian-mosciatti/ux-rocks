@@ -22,10 +22,12 @@
     <MenuModal v-if="showModal" @close="showModal = false" />
   </div>
   <router-view />
+  <Footer />
 </template>
 
 <script>
 import MenuModal from '@/components/menuModal.vue'
+import Footer from '@/components/Footer.vue'
 export default {
   data() {
     return {
@@ -34,6 +36,7 @@ export default {
   },
   components: {
     MenuModal,
+    Footer,
   },
 }
 </script>
@@ -45,6 +48,7 @@ html {
   box-sizing: border-box;
   background-color: $black;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -90,10 +94,9 @@ html {
     .hamburger-menu {
       display: block;
     }
-  }
-
-  .links {
-    display: none;
+    > .links {
+      display: none;
+    }
   }
 }
 </style>

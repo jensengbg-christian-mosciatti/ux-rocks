@@ -1,16 +1,15 @@
 html.ticket {
   min-height: 100vh;
   background-color: $black;
-  background: $bck-shadow, url('./assets/img/bck-tickets.jpg');
-  //   background: url('./assets/img/bck-tickets.jpg');
+  background-image: $bck-shadow, url('./assets/img/bck-tickets.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .home-bg {
-  background: $bg-shadow-home, url('./assets/img/home-bg.png');
   background-color: $black; /* Used if the image is unavailable */
+  background-image: $bg-shadow-home, url('./assets/img/home-bg.png');
   height: 110vh; /* You must set a specified height */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -20,8 +19,7 @@ html.ticket {
 html.lineup {
   min-height: 100vh;
   background-color: $black;
-  background: $lineup-shadow, url('./assets/img/lineup-bg.jpg');
-  //   background: url('./assets/img/bck-tickets.jpg');
+  background-image: $lineup-shadow, url('./assets/img/lineup-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
