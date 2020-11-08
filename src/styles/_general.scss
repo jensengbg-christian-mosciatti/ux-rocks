@@ -1,8 +1,7 @@
 .ticket {
   min-height: 100vh;
   background-color: $black;
-  background: $bck-shadow, url('./assets/img/bck-tickets.jpg');
-  //   background: url('./assets/img/bck-tickets.jpg');
+  background-image: $bck-shadow, url('./assets/img/bck-tickets.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -11,8 +10,8 @@
 }
 
 .home-bg {
-  background: $bg-shadow-home, url('./assets/img/home-bg.png');
   background-color: $black; /* Used if the image is unavailable */
+  background-image: $bg-shadow-home, url('./assets/img/home-bg.png');
   height: 110vh; /* You must set a specified height */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -67,6 +66,10 @@ button {
 a {
   font-family: $font-links;
   font-weight: 300;
+  font-size: 0.86em;
+  text-decoration: none;
+  line-height: 1.91em;
+  color: $white;
 }
 
 h1 {
@@ -82,7 +85,7 @@ h2 {
   // margin: $margin-v-h2;
 
   font-weight: 700;
-  color: white;
+  color: $white;
 }
 h3 {
   font-size: 1.3em;
