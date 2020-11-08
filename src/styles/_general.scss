@@ -66,6 +66,10 @@ button {
 a {
   font-family: $font-links;
   font-weight: 300;
+  font-size: 0.86em;
+  text-decoration: none;
+  line-height: 1.91em;
+  color: $white;
 }
 
 h1 {
@@ -81,7 +85,7 @@ h2 {
   // margin: $margin-v-h2;
 
   font-weight: 700;
-  color: white;
+  color: $white;
 }
 h3 {
   font-size: 1.3em;
