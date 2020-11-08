@@ -42,12 +42,6 @@ export default {
         this.$emit('update:stepper', this.stepper - 1)
     },
   },
-
-  computed: {
-    output() {
-      return this.stepper >= 10 ? '10 or more' : 'Less than 10'
-    },
-  },
 }
 </script>
 
