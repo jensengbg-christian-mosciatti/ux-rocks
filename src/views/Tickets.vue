@@ -37,14 +37,6 @@ export default {
   components: {
     Ticket,
   },
-  created() {
-    document.documentElement.className = 'ticket'
-    // setTimeout(() => (document.documentElement.className = 'ticket'), 1000)
-  },
-  beforeUnmount() {
-    document.documentElement.className = ''
-    // setTimeout(() => console.log('a'), 300)
-  },
 }
 </script>
 

@@ -28,16 +28,6 @@ import PrimaryBtn from '@/components/PrimaryBtn'
 import GhostBtn from '@/components/GhostBtn'
 export default {
   components: {Artist, PrimaryBtn, GhostBtn},
-  beforeMount() {
-    // document.documentElement.classList.add('size')
-    // document.documentElement.classList.add('lineup')
-    // setTimeout(() => document.documentElement.classList.remove('size'), 1)
-    document.documentElement.className = 'lineup'
-  },
-  beforeUnmount() {
-    document.documentElement.className = ''
-    // setTimeout(() => console.log('a'), 300)
-  },
 }
 </script>
 

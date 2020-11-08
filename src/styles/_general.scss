@@ -1,10 +1,12 @@
-html.ticket {
+.ticket {
   min-height: 100vh;
   background-color: $black;
   background-image: $bck-shadow, url('./assets/img/bck-tickets.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 
 .home-bg {
@@ -14,15 +16,23 @@ html.ticket {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   background-position: center;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 
-html.lineup {
+.lineup {
   min-height: 100vh;
   background-color: $black;
-  background-image: $lineup-shadow, url('./assets/img/lineup-bg.jpg');
+  background: $lineup-shadow, url('./assets/img/lineup-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.fade {
+  opacity: 0;
+  transition: none;
 }
 
 .links {
