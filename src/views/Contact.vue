@@ -7,8 +7,9 @@
         look for your answer there.
         <br />
         <br />
-        Contact us in the form or send an email to info@uxrocks.com. We will get
-        back to you as soon as we can.
+        Contact us in the form or send an email to info@uxrocks.com.
+        <br />
+        We will get back to you as soon as we can.
       </p>
     </div>
     <div class="input-container">
@@ -39,6 +40,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .contact-info {
   h1 {
     color: $white;
@@ -47,14 +54,21 @@ export default {
     padding: $padding-p;
   }
 }
-.contact-button,
-.press-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+
 .press-info {
   margin-bottom: $margin-v-section;
+}
+
+.input-container {
+  max-width: 35em;
+}
+@media only screen and (max-width: 500px) {
+  max-width: 30em;
+}
+@media all and (min-width: $desktop-query) {
+  .contact-info {
+    max-width: 45em;
+    text-align: center;
+  }
 }
 </style>
