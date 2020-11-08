@@ -47,8 +47,10 @@ export default {
   flex-direction: column;
 }
 .contact-info {
+  text-align: center;
   h1 {
     color: $white;
+    margin: 50px;
   }
   p {
     padding: $padding-p;
@@ -63,12 +65,8 @@ export default {
   max-width: 35em;
 }
 @media only screen and (max-width: 500px) {
-  max-width: 30em;
-}
-@media all and (min-width: $desktop-query) {
-  .contact-info {
-    max-width: 45em;
-    text-align: center;
+  .contact-container {
+    max-width: 30em;
   }
 }
 </style>
