@@ -77,13 +77,6 @@ import GhostBtn from '@/components/GhostBtn'
 import ArtistModal from '@/components/ArtistModal'
 export default {
   components: {Artist, PrimaryBtn, GhostBtn, ArtistModal},
-  beforeCreate() {
-    document.documentElement.className = 'lineup'
-  },
-  beforeUnmount() {
-    document.documentElement.className = ''
-  },
-
   data() {
     return {
       showArtistModal: false,
