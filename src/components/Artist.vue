@@ -1,8 +1,8 @@
 <template>
-  <div id="artist" :class="type">
-    <h2 class="artist-name"> {{name}} </h2>
+  <div id="artist" :class="type" @click="$emit('artist-clicked')">
+    <h2 class="artist-name">{{ name }}</h2>
     <div class="filter-shadow"></div>
-    <img :src="require(`@/assets/${pic}`)" :alt="name">
+    <img :src="require(`@/assets/${pic}`)" :alt="name" />
   </div>
 </template>
 
@@ -11,8 +11,8 @@ export default {
   props: {
     name: String,
     pic: String,
-    type: String
-  }
+    type: String,
+  },
 }
 </script>
 
@@ -40,10 +40,18 @@ export default {
     // pointer-events: none;
     height: 100%;
     width: 100%;
-    background: radial-gradient(50% 50% at 50% 49.33%, rgba(26, 28, 32, 0.33) 17.71%, rgba(26, 28, 32, 0.75) 100%);
+    background: radial-gradient(
+      50% 50% at 50% 49.33%,
+      rgba(26, 28, 32, 0.33) 17.71%,
+      rgba(26, 28, 32, 0.75) 100%
+    );
     &:hover {
-      background: radial-gradient(50% 50% at 50% 49.33%, rgba(26, 28, 32, 0.13) 17.71%, rgba(26, 28, 32, 0.432) 100%);
-      transition-duration: .1s;
+      background: radial-gradient(
+        50% 50% at 50% 49.33%,
+        rgba(26, 28, 32, 0.13) 17.71%,
+        rgba(26, 28, 32, 0.432) 100%
+      );
+      transition-duration: 0.1s;
       transition-timing-function: ease-out;
     }
   }
@@ -63,14 +71,15 @@ export default {
   max-height: 201px;
 }
 @media all and (max-width: 1000px) {
-.highlight, .rest {
-  margin: 8px;
-  width: 70vw;
-  min-width: 333px;
-  min-height: 180px;
-  max-width: 600px;
-  max-height: 270px;
-  overflow: hidden;
+  .highlight,
+  .rest {
+    margin: 8px;
+    width: 70vw;
+    min-width: 333px;
+    min-height: 180px;
+    max-width: 600px;
+    max-height: 270px;
+    overflow: hidden;
   }
 }
 </style>
