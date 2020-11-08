@@ -23,7 +23,7 @@
 .lineup {
   min-height: 100vh;
   background-color: $black;
-  background: $lineup-shadow, url('./assets/img/lineup-bg.jpg');
+  background-image: $lineup-shadow, url('./assets/img/lineup-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
