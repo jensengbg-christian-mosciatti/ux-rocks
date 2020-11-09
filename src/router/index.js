@@ -1,4 +1,4 @@
-import {createRouter, createWebHashHistory} from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Lineup from '../views/Lineup.vue'
 import Contact from '../views/Contact.vue'
@@ -42,6 +42,11 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+  scrollBehavior: () => {
+    // very bad, maybe better use a Navigation Guard?
+    document.getElementById('app').scrollIntoView()
+    return null
+  },
 })
 
 export default router

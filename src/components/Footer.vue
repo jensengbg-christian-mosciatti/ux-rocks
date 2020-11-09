@@ -15,7 +15,7 @@
         <a href="">ON SALE</a>
         <a href="">INFO</a>
       </div>
-      <GhostBtn title="BUY TICKETS" />
+      <GhostBtn @click="this.$router.push('tickets')" title="BUY TICKETS" />
     </section>
     <section class="general">
       <div class="enquiries">
