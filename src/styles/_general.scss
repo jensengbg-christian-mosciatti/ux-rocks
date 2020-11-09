@@ -6,7 +6,7 @@
   background-size: cover;
   background-position: center;
   opacity: 1;
-  transition: opacity 0.5s;
+  transition: opacity 0.1s ease-in;
 }
 
 .home-bg {
@@ -17,7 +17,7 @@
   background-size: cover; /* Resize the background image to cover the entire container */
   background-position: center;
   opacity: 1;
-  transition: opacity 0.5s;
+  transition: opacity 0.1s ease-in;
 }
 
 .lineup {
@@ -28,7 +28,7 @@
   background-size: cover;
   background-position: center;
   opacity: 1;
-  transition: opacity 0.5s;
+  transition: opacity 0.1s ease-in;
 }
 .fade {
   opacity: 0;

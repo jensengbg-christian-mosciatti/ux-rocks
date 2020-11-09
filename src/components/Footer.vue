@@ -21,7 +21,7 @@
       <div class="enquiries">
         <h2>GENERAL ENQUIRIES</h2>
         <p>
-          Got a question? Please read through our FAQ’s carefully before
+          Got a question? Please read through our <a href="/faq">FAQ</a>’s carefully before
           emailing us! <a href="info@uxrocks.com">info@uxrocks.com</a>
         </p>
       </div>
@@ -77,6 +77,7 @@ section > div:nth-of-type(1) {
   align-items: center;
 
   p {
+    font-family: $font-links;
     text-align: center;
     font-size: 0.85em;
     a {
