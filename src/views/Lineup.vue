@@ -67,7 +67,7 @@ export default {
   
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: $desktop-query) {
   #lineup {
     margin: auto;
     display: flex;
