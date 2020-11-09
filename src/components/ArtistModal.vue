@@ -2,6 +2,7 @@
   <div class="modalContainer">
     <div class="close">
       <img
+        id="closeMobile"
         class="close-x"
         @click="$emit('close')"
         src="../assets/X.svg"
@@ -9,7 +10,18 @@
       />
     </div>
     <div class="filter-shadow"></div>
-    <img :src="require(`@/assets/${pic}`)" />
+    <div class="imageContainer">
+      <img :src="require(`@/assets/${pic}`)" />
+      <div class="close">
+        <img
+          id="closeDesktop"
+          class="close-x"
+          @click="$emit('close')"
+          src="../assets/X.svg"
+          alt="X"
+        />
+      </div>
+    </div>
 
     <div class="nameInfoContainer">
       <h2>{{ name }}</h2>
@@ -49,7 +61,7 @@ export default {
   width: 100%;
   height: 100%;
   background-color: $black-90;
-  z-index: 10;
+  z-index: 1000;
   overflow: scroll;
 }
 
@@ -115,6 +127,14 @@ img {
   }
 }
 
+#closeMobile {
+  opacity: 1;
+}
+
+#closeDesktop {
+  opacity: 0;
+}
+
 /* mobile first approach */
 @media all and (min-width: 1000px) {
   .modalContainer {
@@ -124,7 +144,7 @@ img {
   img {
     margin-top: 5.8em;
     object-fit: cover;
-    width: 50%;
+
     height: 32em;
   }
 
@@ -144,6 +164,29 @@ img {
       margin: 0em 1em;
       position: relative;
     }
+  }
+  .imageContainer {
+    width: 50%;
+  }
+  .close {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 9.5em;
+    right: 24%;
+    img {
+      height: 30px;
+      width: 30px;
+      margin-top: 0;
+      cursor: pointer;
+    }
+  }
+  #closeDesktop {
+    opacity: 1;
+  }
+  #closeMobile {
+    opacity: 0;
   }
 }
 </style>
