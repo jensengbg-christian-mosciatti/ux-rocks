@@ -44,6 +44,7 @@ export default {
 <style lang="scss" scoped>
     .nav-positioning {
       position: absolute;
+      width: 97vw;
     }
     #nav {
         // margin: $margin-v-img;

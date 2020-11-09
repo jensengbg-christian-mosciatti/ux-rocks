@@ -70,9 +70,7 @@ html {
 
 .fade-enter-to,
 .fade-leave-from {
-  opacity: 0;
-  
-  // opacity: 1;
+  opacity: 1;  
 }
 
 </style>
