@@ -101,4 +101,13 @@ h2 {
     text-align: center;
     line-height: 1.6em;
 }
+@media all and (max-width: $desktop-query) {
+  #lineup-list {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80vw;
+  }
+}
 </style>
