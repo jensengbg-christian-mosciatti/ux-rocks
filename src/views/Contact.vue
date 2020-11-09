@@ -3,18 +3,19 @@
     <div class="contact-info">
       <h1>Contact</h1>
       <p>
-        Before you contact us we would be happy if you first look in the FAQ and
-        look for your answer there.
+        Before you contact us we would be happy if you first look through our
+        <router-link to="/faq">FAQ</router-link>'s and look for your answer
+        there.
         <br />
         <br />
-        Contact us in the form or send an email to info@uxrocks.com.
+        Contact us in the form or send an email to info@uxrocks.com
         <br />
         We will get back to you as soon as we can.
       </p>
     </div>
     <div class="input-container">
-      <Input label="Name" />
-      <Input label="Email" />
+      <Input id="name" label="Name" />
+      <Input id="email" label="Email" />
       <Input label="Message" multiline />
     </div>
     <div class="contact-button">
@@ -32,6 +33,7 @@
 import Input from '@/components/InputField'
 import PrimaryBtn from '@/components/PrimaryBtn'
 export default {
+  name: 'Contact',
   components: {
     Input,
     PrimaryBtn,
@@ -54,6 +56,29 @@ export default {
   }
   p {
     padding: $padding-p;
+  }
+  a {
+    position: relative;
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: $white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.2s ease-in-out 0s;
+  }
+
+  a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
   }
 }
 
