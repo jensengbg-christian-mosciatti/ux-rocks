@@ -45,14 +45,15 @@
     </div>
 
     <h2>More <span class="gold">bands</span> to be announced...</h2>
-
-    <ArtistModal
-      v-if="showArtistModal"
-      @close="closeModal"
-      :name="selectedName"
-      :pic="selectedPic"
-      :info="selectedInfo"
-    />
+    <transition name="fade" mode="out-in">
+        <ArtistModal
+          v-if="showArtistModal"
+          @close="closeModal"
+          :name="selectedName"
+          :pic="selectedPic"
+          :info="selectedInfo"
+        />
+    </transition>
   </div>
 </template>
 
