@@ -37,6 +37,7 @@ export default {
 <style lang="scss" scoped>
 .lineup-bg {
   min-height: 100vh;
+  min-width: 100vw;
   background-color: $black;
   background-image: $lineup-shadow, url('../assets/img/lineup-bg.jpg');
   background-repeat: no-repeat;
@@ -72,7 +73,7 @@ export default {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 80vw;
+    width: 100vw;
     .btn-container {
       flex-wrap: wrap;
       max-width: 500px;
