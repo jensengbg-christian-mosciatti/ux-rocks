@@ -1,4 +1,4 @@
-.ticket {
+.ticket-bg {
   min-height: 100vh;
   background-color: $black;
   background-image: $bck-shadow, url('./assets/img/bck-tickets.jpg');
@@ -6,34 +6,16 @@
   background-size: cover;
   background-position: center;
   opacity: 1;
-  transition: opacity 0.1s ease-in;
+  
 }
 
 .home-bg {
   background-color: $black; /* Used if the image is unavailable */
   background-image: $bg-shadow-home, url('./assets/img/home-bg.png');
-  height: 110vh; /* You must set a specified height */
-  
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   background-position: center;
   opacity: 1;
-  transition: opacity 0.1s ease-in;
-}
-
-.lineup {
-  min-height: 100vh;
-  background-color: $black;
-  background-image: $lineup-shadow, url('./assets/img/lineup-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  opacity: 1;
-  transition: opacity 0.1s ease-in;
-}
-.fade {
-  opacity: 0;
-  transition: none;
 }
 
 .links {

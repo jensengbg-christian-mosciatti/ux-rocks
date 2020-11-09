@@ -76,7 +76,7 @@ export default {
   .rest {
     margin: 8px;
     width: 70vw;
-    min-width: 333px;
+    min-width: 200px;
     min-height: 180px;
     max-width: 600px;
     max-height: 270px;
