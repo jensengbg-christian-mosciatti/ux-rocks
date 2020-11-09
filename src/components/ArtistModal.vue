@@ -10,53 +10,30 @@
     </div>
     <div class="filter-shadow"></div>
     <img :src="require(`@/assets/${pic}`)" />
+
     <div class="nameInfoContainer">
       <h2>{{ name }}</h2>
       <p>
         {{ info }}
       </p>
-      <div class="socialContainer">
-        <img
-          class="social"
-          :src="require(`@/assets/spotify.png`)"
-          alt="spotify"
-          @click="linkSpotify"
-        />
-        <img
-          class="social"
-          :src="require(`@/assets/instagram.png`)"
-          alt="instagram"
-          @click="linkInsta"
-        />
-        <img
-          class="social"
-          :src="require(`@/assets/facebook.png`)"
-          alt="facebook"
-          @click="linkFb"
-        />
-      </div>
+    </div>
+    <div class="socialContainer">
+      <SocialLinks />
     </div>
   </div>
 </template>
 
 <script>
+import SocialLinks from '@/components/SocialLinks.vue'
 export default {
   props: {
     name: String,
     pic: String,
     info: String,
   },
-  // general links to social media
-  methods: {
-    linkSpotify() {
-      window.location = 'https://spotify.com'
-    },
-    linkInsta() {
-      window.location = 'https://instagram.com'
-    },
-    linkFb() {
-      window.location = 'https://facebook.com'
-    },
+
+  components: {
+    SocialLinks,
   },
 }
 </script>
@@ -73,6 +50,7 @@ export default {
   height: 100%;
   background-color: $black-90;
   z-index: 10;
+  overflow: scroll;
 }
 
 img {
@@ -114,11 +92,11 @@ img {
     font-size: 40px;
     line-height: 1.2em;
   }
+
   p {
     margin-top: 1em;
     font-family: $font-text;
     font-weight: 500;
-    font-size: 12px;
     color: $black;
   }
 }
@@ -127,7 +105,9 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1em;
+  margin-bottom: 4em;
+  width: 21em;
+
   .social {
     width: 2em;
     height: 2em;
@@ -140,17 +120,30 @@ img {
   .modalContainer {
     padding-top: 5em;
   }
+
   img {
     margin-top: 5.8em;
     object-fit: cover;
-    width: 30%;
-    height: 14.25em;
+    width: 50%;
+    height: 32em;
   }
 
   .nameInfoContainer {
-    width: 30%;
+    width: 50%;
     margin: 0;
     padding: 0.8em 1.8em 1.8em 1.8em;
+  }
+  .socialContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+    .social {
+      width: 2em;
+      height: 2em;
+      margin: 0em 1em;
+      position: relative;
+    }
   }
 }
 </style>
