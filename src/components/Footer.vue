@@ -26,20 +26,18 @@
           <a href="info@uxrocks.com">info@uxrocks.com</a>
         </p>
       </div>
-      <div class="social-cont">
-        <a href=""><img src="@/assets/spotify.svg" alt="Spotify logo"/></a>
-        <a href=""><img src="@/assets/insta.svg" alt="Instagram logo"/></a>
-        <a href=""><img src="@/assets/facebook.svg" alt="Facebook logo"/></a>
-      </div>
+      <SocialLinks />
     </section>
   </footer>
 </template>
 
 <script>
 import GhostBtn from './GhostBtn'
+import SocialLinks from './SocialLinks'
 export default {
   components: {
     GhostBtn,
+    SocialLinks,
   },
 }
 </script>
@@ -86,12 +84,6 @@ section > div:nth-of-type(1) {
       font-size: inherit;
     }
   }
-}
-
-.social-cont {
-  display: flex;
-  justify-content: space-between;
-  width: 70%;
 }
 
 a {
