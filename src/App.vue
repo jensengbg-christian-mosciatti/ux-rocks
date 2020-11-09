@@ -31,7 +31,7 @@
     <MenuModal v-if="showModal" @close="showModal = false" />
   </div>
 
-  <router-view v-slot="{Component}">
+  <router-view v-slot="{ Component }">
     <transition name="fade" mode="out-in">
       <component :is="Component" />
     </transition>
