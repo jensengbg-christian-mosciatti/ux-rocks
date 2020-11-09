@@ -32,7 +32,6 @@ export default {}
   background-color: $black;
   opacity: 0.9;
   z-index: 10;
-
   .close {
     cursor: pointer;
     display: flex;
@@ -46,18 +45,16 @@ export default {}
       right: $margin-hamburger;
     }
   }
-
   .links {
     height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     a {
       &:hover {
         color: $gold;
-        transition: .3s ease-in-out;
+        transition: 0.3s ease-in-out;
       }
     }
   }
