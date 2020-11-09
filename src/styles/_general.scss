@@ -12,6 +12,7 @@ html.ticket {
   background: $bg-shadow-home, url('./assets/img/home-bg.png');
   background-color: $black; /* Used if the image is unavailable */
   height: 110vh; /* You must set a specified height */
+  
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   background-position: center;
