@@ -12,7 +12,7 @@ $font-text: 'Libre Baskerville', serif;
 //*MARGINS
 $margin-v-h1: 1.86em;
 $margin-v-h2: 0.86em;
-$margin-v-mobile-button: 1.8em;
+$margin-v-mobile-button: 3vw;
 $margin-v-button: 2.86em;
 $margin-v-section: 3.3em;
 $margin-v-img: 1.86em;
@@ -69,3 +69,6 @@ $bg-shadow-home: linear-gradient(180deg, rgba(0, 0, 0, 0.57) 0%, #1A1C20 100%);
 
 //RESPONSIVE
 $desktop-query: 1000px;
+
+//Transition
+$fade: opacity 0.3s ease-in-out;

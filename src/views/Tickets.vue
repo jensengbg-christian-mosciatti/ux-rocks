@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="ticket-bg">
     <section class="title">
       <h1>Tickets</h1>
     </section>
@@ -33,6 +33,7 @@
 
 <script>
 import Ticket from '@/components/TicketShop.vue'
+
 export default {
   components: {
     Ticket,
@@ -98,7 +99,6 @@ p {
     width: 50%;
     height: 80%;
     border-right: 1px solid $gold;
-    z-index: -1;
   }
 }
 </style>
