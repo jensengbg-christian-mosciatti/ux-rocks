@@ -66,7 +66,7 @@ export default {
     width: 280px;
   }
   display: grid;
-  width: 100vw;
+  
   grid: 1fr;
   section,
   footer {

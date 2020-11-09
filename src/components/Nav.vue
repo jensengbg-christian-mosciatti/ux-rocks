@@ -13,14 +13,16 @@
       />
 
       <div class="links">
-        <router-link @click="$emit('close')" to="/">HOME</router-link>
-        <router-link @click="$emit('close')" to="/lineup">LINEUP</router-link>
-        <router-link @click="$emit('close')" to="/tickets">TICKETS</router-link>
-        <router-link @click="$emit('close')" to="/contact">CONTACT</router-link>
-        <router-link @click="$emit('close')" to="/faq">FAQ</router-link>
+        <router-link  to="/">HOME</router-link>
+        <router-link  to="/lineup">LINEUP</router-link>
+        <router-link  to="/tickets">TICKETS</router-link>
+        <router-link  to="/contact">CONTACT</router-link>
+        <router-link  to="/faq">FAQ</router-link>
       </div>
-
-      <MenuModal v-if="showModal" @close="showModal = false" />
+      <transition name="fade" mode="out-in">
+        <MenuModal v-if="showModal" @close="showModal = false" />
+      </transition>
+      
     </div>
 
   </div>
@@ -44,7 +46,7 @@ export default {
 <style lang="scss" scoped>
     .nav-positioning {
       position: absolute;
-      width: 97vw;
+      width: 100%;
     }
     #nav {
         // margin: $margin-v-img;
@@ -66,6 +68,7 @@ export default {
         a {
         &:hover {
             color: $gold;
+            transition: .3s ease-in-out;
         }
         }
     }

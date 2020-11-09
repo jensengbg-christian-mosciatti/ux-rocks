@@ -57,6 +57,7 @@ export default {}
     a {
       &:hover {
         color: $gold;
+        transition: .3s ease-in-out;
       }
     }
   }
