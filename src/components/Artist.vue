@@ -46,6 +46,7 @@ export default {
       rgba(26, 28, 32, 0.75) 100%
     );
     &:hover {
+      cursor: pointer;
       background: radial-gradient(
         50% 50% at 50% 49.33%,
         rgba(26, 28, 32, 0.13) 17.71%,

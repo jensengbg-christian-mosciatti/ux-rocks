@@ -154,8 +154,8 @@ html {
 
 .fade-enter-to,
 .fade-leave-from {
-  // opacity: 0;
-  opacity: 1;
+  opacity: 0;
+  // opacity: 1;
 }
 
 @media all and (max-width: $desktop-query) {
