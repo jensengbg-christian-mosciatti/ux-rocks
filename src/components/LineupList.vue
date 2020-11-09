@@ -46,14 +46,14 @@
 
     <h2>More <span class="gold">bands</span> to be announced...</h2>
     <transition name="fade" mode="out-in">
-        <ArtistModal
-          v-if="showArtistModal"
-          @close="closeModal"
-          :name="selectedName"
-          :pic="selectedPic"
-          :info="selectedInfo"
-        />
-    </transition>
+      <ArtistModal
+        v-if="showArtistModal"
+        @close="closeModal"
+        :name="selectedName"
+        :pic="selectedPic"
+        :info="selectedInfo"
+      />
+      </transition>
   </div>
 </template>
 
@@ -82,7 +82,7 @@ export default {
 
 <style lang="scss">
 #lineup-list {
-  margin: auto;
+  margin: $margin-v-section auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
