@@ -2,18 +2,18 @@
   <footer>
     <section class="linkz">
       <h2>LINKS</h2>
-      <a href="">LINEUP</a>
-      <a href="">TICKETS</a>
+      <a href="#/lineup">LINEUP</a>
+      <a href="#/tickets">TICKETS</a>
       <a href="">INFORMATION</a>
-      <a href="">FAQ'S</a>
+      <a href="#/faq">FAQ'S</a>
       <a href="">NEWS</a>
-      <a href="">CONTACT</a>
+      <a href="#/contact">CONTACT</a>
     </section>
     <section class="tickets">
       <div>
         <h2>TICKETS</h2>
-        <a href="">ON SALE</a>
-        <a href="">INFO</a>
+        <a href="#/tickets">ON SALE</a>
+        <a href="#/tickets">INFO</a>
       </div>
       <GhostBtn @click="this.$router.push('tickets')" title="BUY TICKETS" />
     </section>
@@ -21,8 +21,9 @@
       <div class="enquiries">
         <h2>GENERAL ENQUIRIES</h2>
         <p>
-          Got a question? Please read through our <a href="/faq">FAQ</a>’s carefully before
-          emailing us! <a href="info@uxrocks.com">info@uxrocks.com</a>
+          Got a question? Please read through our <a href="#/faq">FAQ</a>’s
+          carefully before emailing us!
+          <a href="info@uxrocks.com">info@uxrocks.com</a>
         </p>
       </div>
       <div class="social-cont">
@@ -119,7 +120,6 @@ a:hover::before {
   footer {
     width: 100%;
     grid-template: 'links general tickets' 1fr / 1fr 1fr 1fr;
-
     max-width: $desktop-query;
   }
   .linkz {
