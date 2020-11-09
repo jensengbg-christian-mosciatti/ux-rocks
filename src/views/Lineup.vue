@@ -1,47 +1,49 @@
 <template>
-  <div id="lineup">
-    <h1>Lineup</h1>
-    <div class="btn-container">
-      <PrimaryBtn title="ALL" />
-      <GhostBtn title="THURSDAY" />
-      <GhostBtn title="FRIDAY" />
-      <GhostBtn title="SATURDAY" />
+    <div class="lineup-bg">
+      <div id="lineup">
+        <h1>Lineup</h1>
+        <div class="btn-container">
+          <PrimaryBtn title="ALL" />
+          <GhostBtn title="THURSDAY" />
+          <GhostBtn title="FRIDAY" />
+          <GhostBtn title="SATURDAY" />
+        </div>
+        <LineupList />
+      </div>
+
     </div>
-    <LineupList />
-  </div>
 </template>
 
 <script>
 import LineupList from '@/components/LineupList'
 import PrimaryBtn from '@/components/PrimaryBtn'
 import GhostBtn from '@/components/GhostBtn'
+
+
 export default {
   components: {LineupList, PrimaryBtn, GhostBtn},
   data() {
     return {
-      showArtistModal: false,
       selectedName: '',
       selectedPic: '',
       selectedInfo: '',
     }
   },
 
-  methods: {
-    showModal(name, pic, info) {
-      this.selectedName = name
-      this.selectedPic = pic
-      this.selectedInfo = info
-      this.showArtistModal = true
-    },
-
-    closeModal() {
-      this.showArtistModal = false
-    },
-  },
+  
 }
 </script>
 
 <style lang="scss" scoped>
+.lineup-bg {
+  min-height: 100vh;
+  background-color: $black;
+  background-image: $lineup-shadow, url('../assets/img/lineup-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 #lineup {
   margin: auto;
   display: flex;
@@ -50,15 +52,12 @@ export default {
   width: 70vw;
   max-width: 1400px;
   flex-direction: column;
+
   h1 {
     color: $gold;
     margin: 50px;
   }
-  h2 {
-    max-width: 200px;
-    text-align: center;
-    line-height: 1.6em;
-  }
+  
   .btn-container {
     display: flex;
     justify-content: center;

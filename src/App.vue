@@ -1,8 +1,8 @@
 <template>
-
+  <Nav/>
   <router-view v-slot="{ Component }">
     <transition name="fade" mode="out-in">
-      <component :is="Component" />
+      <component class="margin-top" :is="Component" />
     </transition>
   </router-view>
 
@@ -11,16 +11,22 @@
 
 <script>
 import Footer from '@/components/Footer.vue'
+import Nav from '@/components/Nav.vue'
 
 export default {
   components: {
     Footer,
+    Nav
   },
 }
 </script>
 
 <style lang="scss">
 @import '@/styles/_general';
+
+.margin-top {
+  padding-top: 120px;
+}
 
 html {
   box-sizing: border-box;
@@ -59,11 +65,13 @@ html {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+  
 }
 
 .fade-enter-to,
 .fade-leave-from {
   opacity: 0;
+  
   // opacity: 1;
 }
 

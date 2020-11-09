@@ -1,25 +1,28 @@
 <template>
-  <div id="nav">
-    <router-link to="/">
-      <img src="@/assets/uxrocks.svg" alt="logo" />
-    </router-link>
+  <div class="nav-positioning">
+    <div id="nav">
+      <router-link to="/">
+        <img src="@/assets/uxrocks.svg" alt="logo" />
+      </router-link>
 
-    <img
-      class="hamburger-menu"
-      @click="showModal = true"
-      src="@/assets/menu.svg"
-      alt="menu"
-    />
+      <img
+        class="hamburger-menu"
+        @click="showModal = true"
+        src="@/assets/menu.svg"
+        alt="menu"
+      />
 
-    <div class="links">
-      <router-link @click="$emit('close')" to="/">HOME</router-link>
-      <router-link @click="$emit('close')" to="/lineup">LINEUP</router-link>
-      <router-link @click="$emit('close')" to="/tickets">TICKETS</router-link>
-      <router-link @click="$emit('close')" to="/contact">CONTACT</router-link>
-      <router-link @click="$emit('close')" to="/faq">FAQ</router-link>
+      <div class="links">
+        <router-link @click="$emit('close')" to="/">HOME</router-link>
+        <router-link @click="$emit('close')" to="/lineup">LINEUP</router-link>
+        <router-link @click="$emit('close')" to="/tickets">TICKETS</router-link>
+        <router-link @click="$emit('close')" to="/contact">CONTACT</router-link>
+        <router-link @click="$emit('close')" to="/faq">FAQ</router-link>
+      </div>
+
+      <MenuModal v-if="showModal" @close="showModal = false" />
     </div>
 
-    <MenuModal v-if="showModal" @close="showModal = false" />
   </div>
 </template>
 
@@ -39,6 +42,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    .nav-positioning {
+      position: absolute;
+    }
     #nav {
         // margin: $margin-v-img;
         padding: $margin-v-img;

@@ -60,18 +60,44 @@
 import Artist from '@/components/Artist'
 import ArtistModal from '@/components/ArtistModal'
 export default {
-    components: { Artist, ArtistModal }
+    components: { Artist, ArtistModal },
+    data() {return{
+      showArtistModal: false,
+    }},
+    methods: {
+    showModal(name, pic, info) {
+      this.selectedName = name
+      this.selectedPic = pic
+      this.selectedInfo = info
+      this.showArtistModal = true
+    },
+
+    closeModal() {
+      this.showArtistModal = false
+    },
+  },
 }
 </script>
 
 <style lang="scss">
 #lineup-list {
-
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70vw;
+  max-width: 1400px;
+  flex-direction: column;
     .lineup-container {
         margin: 50px auto;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
       }
+}
+h2 {
+    max-width: 200px;
+    text-align: center;
+    line-height: 1.6em;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="home home-bg">
-    <Nav/>
+    <!-- <Nav/> -->
     <main>
       <section>
         <h1 class="gold">UX ROCKS</h1>
@@ -41,20 +41,21 @@
 // @ is an alias to /src
 import PrimaryBtn from '@/components/PrimaryBtn'
 import GhostBtn from '@/components/GhostBtn'
-import Nav from '@/components/Nav'
+// import Nav from '@/components/Nav'
 
 export default {
   name: 'Home',
   components: {
     PrimaryBtn,
     GhostBtn,
-    Nav
+    
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .home {
+
   main {
     height: calc(100vh - 60px);
     margin-top: 5em;
