@@ -1,41 +1,42 @@
 <template>
-  <main>
-    <section class="title">
-      <h1>Tickets</h1>
-    </section>
-    <section class="main-cont">
-      <div class="divider"></div>
-      <div class="inner-box info-box">
-        <article>
-          <h2>How to get tickets</h2>
-          <p>
-            You can buy tickets online right here in this page. <br />
-            If you don't want to buy tickets online, we have 10 ticket windows
-            at the entrance of the hall.
-          </p>
-        </article>
-        <article>
-          <h2>Prices</h2>
-          <p>
-            - One day ticket: 250 Kr <br />
-            - Two days ticket: 400 Kr <br />
-            - Three days ticket: 600 Kr
-          </p>
-        </article>
-      </div>
-      <div class="inner-box ticket-box">
-        <h2>Buy Tickets Online</h2>
-        <Ticket />
-      </div>
-    </section>
-  </main>
+    <main class="ticket-bg">
+      <section class="title">
+        <h1>Tickets</h1>
+      </section>
+      <section class="main-cont">
+        <div class="divider"></div>
+        <div class="inner-box info-box">
+          <article>
+            <h2>How to get tickets</h2>
+            <p>
+              You can buy tickets online right here in this page. <br />
+              If you don't want to buy tickets online, we have 10 ticket windows
+              at the entrance of the hall.
+            </p>
+          </article>
+          <article>
+            <h2>Prices</h2>
+            <p>
+              - One day ticket: 250 Kr <br />
+              - Two days ticket: 400 Kr <br />
+              - Three days ticket: 600 Kr
+            </p>
+          </article>
+        </div>
+        <div class="inner-box ticket-box">
+          <h2>Buy Tickets Online</h2>
+          <Ticket />
+        </div>
+      </section>
+    </main>
 </template>
 
 <script>
 import Ticket from '@/components/TicketShop.vue'
+
 export default {
   components: {
-    Ticket,
+    Ticket
   },
 }
 </script>
