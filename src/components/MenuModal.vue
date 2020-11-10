@@ -29,8 +29,7 @@ export default {}
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: $black;
-  opacity: 0.9;
+  background-color: rgba(26, 28, 32, 0.9);
   z-index: 10;
   .close {
     cursor: pointer;
