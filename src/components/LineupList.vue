@@ -118,6 +118,9 @@ h2 {
     justify-content: center;
     flex-wrap: wrap;
     width: 80vw;
+    .lineup-container {
+      justify-content: center;
+    }
   }
 }
 </style>
