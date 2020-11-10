@@ -30,7 +30,7 @@ export default {}
   width: 100%;
   height: 100%;
   background-color: $black;
-  opacity: 0.9;
+  opacity: .90;
   z-index: 10;
   .close {
     cursor: pointer;
