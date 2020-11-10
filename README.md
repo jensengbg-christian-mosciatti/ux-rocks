@@ -23,15 +23,15 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-## Gruppmedlemmar Flaming Flamingos
+### Gruppmedlemmar Flaming Flamingos
 Adin Ehnsiö FRK19S
 Clara Berglund FRK19S
 Christian Mosciatti FRK19G
 Frida Johansson FRK19S
 Viktor Rizk FRK19S
 
-## Beskrivning av app
+### Beskrivning av app
 En hemsida för en rockfestival som heter UX rocks. Där man kan se vilka artister som ska spela på festivalen, möjlighet att köpa biljetter, kontaktuppgifter m.m.
 
-## Förbättringar
+### Förbättringar
 Vi har gjort förbättringar i css prototypen under processen jämfört med vår figma-skiss. 
