@@ -34,4 +34,4 @@ Viktor Rizk FRK19S
 En hemsida för en rockfestival som heter UX rocks. Där man kan se vilka artister som ska spela på festivalen, möjlighet att köpa biljetter, kontaktuppgifter m.m.
 
 ### Förbättringar
-Vi har gjort förbättringar i css prototypen under processen jämfört med vår figma-skiss. 
+Vi har gjort förbättringar i css prototypen under processen jämfört med vår figma-skiss vi utgick ifrån från början. Vi har gjort om några stylingsdetaljer för att göra vår hemsida mer enhetlig och lagt till vissa designdetaljer för att göra vår hemsida ännu snyggare.
