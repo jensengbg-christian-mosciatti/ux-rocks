@@ -37,12 +37,13 @@ export default {
 <style lang="scss" scoped>
 .lineup-bg {
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 90vw;
   background-color: $black;
   background-image: $lineup-shadow, url('../assets/img/lineup-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 
 #lineup {
