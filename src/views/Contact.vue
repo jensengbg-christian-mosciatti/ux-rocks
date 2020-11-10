@@ -8,25 +8,26 @@
         there.
         <br />
         <br />
-        Contact us in the form or send an email to info@uxrocks.com
-          <br />
-          We will get back to you as soon as we can.
-        </p>
-      </div>
-      <div class="input-container">
-        <Input label="Name" />
-        <Input label="Email" />
-        <Input label="Message" multiline />
-      </div>
-      <div class="contact-button">
-        <PrimaryBtn @click="$router.go(n)" title="SEND MESSAGE" />
-      </div>
-      <p class="press-info">
-        For press questions email to:
+        Contact us in the form or send an email to
+        <a href="/">info@uxrocks.com</a>
         <br />
-        press@uxrocks.se
+        We will get back to you as soon as we can.
       </p>
     </div>
+    <div class="input-container">
+      <Input label="Name" />
+      <Input label="Email" />
+      <Input label="Message" multiline />
+    </div>
+    <div class="contact-button">
+      <PrimaryBtn @click="$router.go(n)" title="SEND MESSAGE" />
+    </div>
+    <p class="press-info">
+      For press questions email to:
+      <br />
+      <a href="/">press@uxrocks.se</a>
+    </p>
+  </div>
 </template>
 
 <script>
@@ -58,37 +59,39 @@ export default {
   p {
     padding: $padding-p;
   }
-  a {
-    position: relative;
-    font-family: inherit;
-    font-size: inherit;
-  }
-
-  a::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: $white;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.2s ease-in-out 0s;
-  }
-
-  a:hover::before {
-    visibility: visible;
-    transform: scaleX(1);
-  }
 }
 
 .press-info {
   margin-bottom: $margin-v-section;
+  text-align: center;
 }
 
 .input-container {
   max-width: 35em;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: $white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+a {
+  position: relative;
+  font-family: inherit;
+  font-size: inherit;
 }
 @media only screen and (max-width: 500px) {
   .contact-container {
