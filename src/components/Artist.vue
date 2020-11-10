@@ -20,12 +20,13 @@ export default {
 #artist {
   position: relative;
   overflow: hidden;
-  margin: 8px;
+  // margin: 8px;
   // background: radial-gradient(50% 50% at 50% 49.33%, rgba(26, 28, 32, 0.33) 17.71%, rgba(26, 28, 32, 0.75) 100%);
   img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+
   }
   .artist-name {
     color: $white;
@@ -58,18 +59,11 @@ export default {
   }
 }
 .highlight {
-  width: 33vw;
-  min-width: 333px;
-  min-height: 180px;
-  max-width: 670px;
-  max-height: 270px;
+  width: 49%;
 }
 .rest {
-  width: 21vw;
-  min-width: 200px;
-  min-height: 180px;
-  max-width: 450px;
-  max-height: 201px;
+  width: 32%;
+
 }
 @media all and (max-width: 1000px) {
   .highlight,

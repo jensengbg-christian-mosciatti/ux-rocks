@@ -101,8 +101,9 @@ export default {
   .lineup-container {
     margin: 50px auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    row-gap: 8px;
   }
 }
 h2 {
@@ -117,6 +118,9 @@ h2 {
     justify-content: center;
     flex-wrap: wrap;
     width: 80vw;
+    .lineup-container {
+      justify-content: center;
+    }
   }
 }
 </style>
