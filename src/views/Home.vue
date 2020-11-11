@@ -18,7 +18,7 @@
       </section>
     </main>
 
-    <LineupList class="lineup"/>
+    <LineupList class="lineup" />
     <section class="info-right">
       <p>
         Taking place in the middle of summer, in the cozy town Karlskrona. UX
@@ -48,7 +48,7 @@ export default {
   components: {
     PrimaryBtn,
     GhostBtn,
-    LineupList
+    LineupList,
   },
 }
 </script>
@@ -57,7 +57,7 @@ export default {
 .home {
   display: grid;
   grid: 1fr;
-  
+
   main {
     height: calc(100vh - 60px);
     margin-top: 5em;
@@ -67,6 +67,10 @@ export default {
     text-align: center;
     width: 280px;
   }
+  ul {
+    text-align: center;
+  }
+
   section,
   footer {
     display: flex;
@@ -86,20 +90,20 @@ export default {
   .home {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "main main" "lineup lineup" "info-left info-right";
-      .lineup {
-        grid-area: lineup;
-      }
-      .info-left {
-        grid-area: info-left;
-        justify-self: flex-end;
-        margin-right: 6em;
-      }
-      .info-right {
-        justify-self: flex-start;
-        grid-area: info-right;
-        margin-left: 6em;
-      }
+    grid-template-areas: 'main main' 'lineup lineup' 'info-left info-right';
+    .lineup {
+      grid-area: lineup;
+    }
+    .info-left {
+      grid-area: info-left;
+      justify-self: flex-end;
+      margin-right: 6em;
+    }
+    .info-right {
+      justify-self: flex-start;
+      grid-area: info-right;
+      margin-left: 6em;
+    }
     main {
       grid-area: main;
       .artist-list {
